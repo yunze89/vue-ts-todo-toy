@@ -1,12 +1,24 @@
 <template>
   <div id="app">
-    <div id="nav">
+    <todo-list></todo-list>
+<!--    <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
-    <router-view />
+    <router-view />-->
   </div>
 </template>
+<script lang="ts">
+  import {Component, Vue} from 'vue-property-decorator';
+  import TodoList from "@/components/TodoList.vue";
+
+  @Component({
+    components: {
+      TodoList
+    }
+  })
+  export default class App extends Vue{}
+</script>
 
 <style lang="scss">
 #app {
